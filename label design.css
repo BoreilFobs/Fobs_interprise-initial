@@ -1,0 +1,102 @@
+:root {
+  --primary-color: wheat;
+  --secondary-color: whitesmoke;
+  --tertiary-color: black;
+}
+body {
+  background-color: rgb(233, 238, 243);
+}
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  list-style: none;
+}
+.section-one {
+  background: url(images/43.jpg);
+  min-height: 93vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  box-shadow: 2px 7px 25px 5px black;
+  border-radius: 0 0px 20px 20px;
+}
+@keyframes show {
+  to {
+    transform: translateY(0);
+  }
+}
+.section-one .content {
+  padding-top: 15%;
+  padding-left: 10%;
+  padding-right: 100px;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 30px;
+  font-family: cursive;
+  text-align: center;
+  color: var(--tertiary-color);
+  font-weight: 800;
+  overflow-y: hidden;
+}
+.section-one .content h1 {
+  transform: translateX(600px);
+  animation: 1s show forwards;
+}
+.section-one .content p {
+  transform: translateY(600px);
+  animation: 1s show forwards;
+}
+/* ---------------------------------------------section2-------------------------------------------------------- */
+.section-two {
+  padding: 100px 20px;
+}
+.section-two ul {
+  display: flex;
+}
+.section-two ul li {
+  margin: 10px;
+  max-width: 40vw;
+  list-style: none;
+  text-align: center;
+  line-height: 30px;
+  letter-spacing: 1.5px;
+  margin-left: 80px;
+}
+.section-two ul li img {
+  max-width: 30vw;
+  border-radius: 25px;
+}
+.section-two #img3 {
+  margin-left: 47%;
+  transform: translate(-50%);
+}
+
+/* ----------------------------------------------------responsivness----------------------------------------00 */
+@media screen and (max-width: 950px) {
+  body {
+    overflow-x: hidden;
+  }
+  .section-one .content {
+    font-size: 20px;
+    padding-top: 180px;
+    width: 80vw;
+    padding-left: 10px;
+  }
+  .section-two ul {
+    flex-direction: column;
+  }
+  .section-two ul li {
+    max-width: 70vw;
+    margin-left: 10px;
+    margin-left: 10%;
+  }
+  .section-two ul li img {
+    max-width: 70vw;
+  }
+  .section-two #img3 {
+    margin-left: 40%;
+  }
+}

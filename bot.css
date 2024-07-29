@@ -1,0 +1,221 @@
+:root {
+  --primary-color: wheat;
+  --secondary-color: whitesmoke;
+  --tertiary-color: black;
+}
+body {
+  background-color: rgb(233, 238, 243);
+}
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  list-style: none;
+}
+.section-one {
+  background: url(images/35.jpg);
+  min-height: 75vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  box-shadow: 2px 7px 25px 5px black;
+  border-radius: 0 0px 20px 20px;
+  overflow-x: hidden;
+}
+@keyframes show {
+  to {
+    transform: translateY(0);
+  }
+}
+
+.section-one .content {
+  padding-top: 15%;
+  font-size: 23px;
+  font-family: cursive;
+  margin-left: 100px;
+  padding-right: 55%;
+  color: var(--primary-color);
+  text-align: center;
+}
+.section-one .content h1 {
+  animation: 1s showH1 forwards;
+}
+.section-one .content p {
+  animation: 1s showp forwards;
+}
+@keyframes showH1 {
+  from {
+    transform: translateX(-400px);
+  }
+}
+@keyframes showp {
+  from {
+    transform: translateY(300px);
+  }
+}
+
+/* ----------------------------------------------------------------------------section2------------------------------------------------------------ */
+.section-two {
+  padding: 20px;
+  margin-top: 100px;
+}
+.section-two ul {
+  display: flex;
+}
+.section-two ul li {
+  margin: 10px;
+  max-width: 40vw;
+  list-style: none;
+  text-align: center;
+  line-height: 30px;
+  letter-spacing: 1.5px;
+  padding-left: 8px;
+}
+.section-two ul li img {
+  max-width: 30vw;
+  border-radius: 25px;
+  box-shadow: 10px black;
+}
+/* ----------------------------------------------------------------------------------clip-path-------------------------------------------------------- */
+.clip-path {
+  -webkit-clip-path: polygon(0 31%, 100% 1%, 100% 73%, 0 100%, 0% 50%);
+  clip-path: polygon(0 31%, 100% 1%, 100% 73%, 0 100%, 0% 50%);
+  background-image: url(images/37.jpg);
+  position: relative;
+  min-height: 30rem;
+  min-width: 97vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 7px;
+}
+.content3 {
+  padding: 20px 15%;
+  line-height: 30px;
+  letter-spacing: 1.3px;
+}
+.content3 p {
+  text-indent: 4em;
+}
+/* ----------------------------------------------------------------------------section3------------------------------------------------------------ */
+.section-three ul {
+  display: flex;
+  gap: 35px;
+  margin: 10px;
+}
+.section-three ul li {
+  list-style: none;
+  box-shadow: 4px black;
+  text-align: center;
+}
+.section-three ul li span {
+  margin-left: 11px;
+  font-weight: 900;
+}
+.section-three ul li img {
+  max-width: 30vw;
+  margin: 20px;
+  margin-left: 110px;
+  border-radius: 25px;
+  box-shadow: 2px 7px 15px 5px black;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.section-three ul li #img-whatsapp {
+  margin-left: 400px;
+  box-shadow: 1px 1px 1px 1px rgb(75, 74, 74);
+}
+.section-three ul li img:hover {
+  transform: scale(1.03);
+}
+.section-three #img2 {
+  margin-left: 50%;
+  transform: translate(-50%);
+}
+.section-three h2 {
+  margin-top: 60px;
+  margin-left: 40%;
+  transform: translate(-40%);
+  text-align: center;
+  font-family: Constantia;
+  line-height: 25px;
+}
+
+/* ------------------------responsiveness---------- */
+@media screen and (max-width: 950px) {
+  body {
+    overflow-x: hidden;
+  }
+ .section-one{
+     min-height :75px;
+ }
+  .section-one .content {
+    font-size: 18px;
+    left: 10px;
+    top: 250px;
+    position: relative;
+    justify-content: center;
+    font-weight: 900;
+    width: 350px;
+    margin-top: 100px;
+    margin-left: 10px;
+  }
+  .section-one .content h1 {
+    position: absolute;
+    font-size: 40px;
+    width: 80vw;
+    top: -200px;
+    text-align: left;
+  }
+  .section-two ul {
+    flex-direction: column;
+  }
+  .section-two ul li {
+    max-width: 80vw;
+    letter-spacing: 1.1px;
+    line-height: 20px;
+  }
+  .section-two ul li img {
+    min-width: 80vw;
+  }
+  .clip-path {
+    min-height: 300px;
+  }
+
+  .content3 {
+    line-height: 20px;
+    letter-spacing: 1.1px;
+  }
+  .section-three {
+    background: rgba(87, 77, 59, 0.568);
+    padding-top: 20px;
+    display: flex;
+    margin: 0;
+    padding: 10px;
+    gap: 10px;
+    overflow-x: scroll;
+  }
+  .section-three ul li {
+    max-width: 50vw;
+  }
+  .section-three ul li img {
+    max-width: 50vw;
+  }
+  .section-three ul li #img-whatsapp {
+    margin-left: 50px;
+  }
+  .section-three h2 {
+    font-size: 25px;
+    text-align: center;
+    font-family: Constantia;
+    line-height: 25px;
+  }
+  .section-three ul li img {
+    margin-left: 0;
+  }
+  .section-three h2 {
+    margin-left: 15%;
+  }
+}
